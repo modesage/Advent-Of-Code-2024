@@ -1,0 +1,90 @@
+--- Day 4: Ceres Search ---
+"Looks like the Chief's not here. Next!" One of The Historians pulls out a device and pushes the only button on it. After a brief flash, you recognize the interior of the Ceres monitoring station!
+
+As the search for the Chief continues, a small Elf who lives on the station tugs on your shirt; she'd like to know if you could help her with her word search (your puzzle input). She only has to find one word: XMAS.
+
+This word search allows words to be horizontal, vertical, diagonal, written backwards, or even overlapping other words. It's a little unusual, though, as you don't merely need to find one instance of XMAS - you need to find all of them. Here are a few ways XMAS might appear, where irrelevant characters have been replaced with .:
+
+
+..X...
+.SAMX.
+.A..A.
+XMAS.S
+.X....
+The actual word search will be full of letters instead. For example:
+
+MMMSXXMASM
+MSAMXMSMSA
+AMXSXMAAMM
+MSAMASMSMX
+XMASAMXAMM
+XXAMMXXAMA
+SMSMSASXSS
+SAXAMASAAA
+MAMMMXMMMM
+MXMXAXMASX
+In this word search, XMAS occurs a total of 18 times; here's the same word search again, but where letters not involved in any XMAS have been replaced with .:
+
+....XXMAS.
+.SAMXMS...
+...S..A...
+..A.A.MS.X
+XMASAMX.MM
+X.....XA.A
+S.S.S.S.SS
+.A.A.A.A.A
+..M.M.M.MM
+.X.X.XMASX
+Take a look at the little Elf's word search. How many times does XMAS appear?
+
+
+
+
+
+
+
+
+
+i want to create a circle approach, from the X letter going till 3 more indices ahead, 
+
+horizontal forward check 
+MAS 
+
+horizontal backward check, 
+SAM 
+
+vertical down 
+M
+A
+S
+
+vertical up
+S
+M
+A 
+
+diagonal down left
+      M
+   A
+S
+
+diagonal down right
+            M
+               A
+                  S
+
+diagonal up left
+          S
+            A
+               M
+
+diagonal up right
+          S
+     A
+M
+
+so in total 8 check for 1 X letter in the circle approach
+
+and need to do this for whole input 2d vector
+
+and when the whole XMAS is found then need to increase the frequency
